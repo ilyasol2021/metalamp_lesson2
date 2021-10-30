@@ -1,0 +1,19 @@
+.btn_login {
+  width: 87px;
+  height: 34px;
+  border-radius: 22px;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #BC9CFF;
+  border-color: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  border: 2px solid;
+  transition: opacity 250ms;
+}
+
+.btn_login:hover {
+  opacity: .75;
+}

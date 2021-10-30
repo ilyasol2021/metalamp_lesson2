@@ -1,0 +1,34 @@
+mixin t_copyright(item)
+  p.copiright(class= item) Copyright &copy; 2018 Toxin отель. Все права защищены.
+mixin footer(item)
+  case item
+    when "standart"
+      footer.footer-standart
+        .footer-widget 
+          .footer-widget__info 
+            +logo("footer-standart","color","footer-widger__logo")
+            p.text Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
+          ul.footer-widget__nav
+            each val in [{name: "Навигация", links: ["О нас", "Новости", "Служба поддержки", "Услуги"]}, {name: "О нас", links: ["О сервисе", "Наша команда", "Вакансии", "Инвесторы"]}, {name: "Служба поддержки", links: ["Согласшения", "Сообщества", "Связь с нами"]}]
+              ul.footer-widget__nav-column 
+                li.footer-widget__nav-item: a(href="#" class="nav-link"): h3.h3= val.name
+                each i_val in val.links
+                  li.footer-widget__nav-item: a(href="#" class="nav-link")= i_val
+            ul.footer-widget__nav-column 
+              li.footer-widget__nav-item: a(href="#" class="nav-link"): h3.h3 Подписка
+              li.footer-widget__nav-item: p.text Получайте специальные предложения и новости сервиса
+              form.footer-widget__form#id
+                input(type="email" placeholder="Email" class= "footer-widget_email")
+                span.footer-widget_email-next(title= "Next")
+        .copyright-bar 
+          +t_copyright("copyright-bar__item")
+          ul.social-links.copyright-bar__item
+            each val in ["tw.svg", "fb.svg", "ig.svg"]
+              li.social-links__item: +link-img("social-link", "#", "", "../../../images/social-icon/"+ val, "nav-link__image nav-link__image_position_fotter")
+    when "mobile"
+      footer.footer-mobile
+        +logo("footer-mobile","color","footer-mobile__item")
+        +t_copyright("footer-mobile__item")
+        ul.social-links.footer-mobile__item
+          each val in ["tw.svg", "fb.svg", "ig.svg"]
+            li.social-links__item: +link-img("social-link", "#", "", "../../../images/social-icon/"+ val, "nav-link__image nav-link__image_position_fotter")

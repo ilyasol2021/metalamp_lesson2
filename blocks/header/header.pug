@@ -1,0 +1,37 @@
+mixin links(attribute, href, name)
+  a(class=attribute href=href): h3.h3= name
+mixin link-img(attribute, href, name, img, i_class)
+  a(class=attribute href=href)= name
+    img(src=img)(class= i_class)
+mixin link(attribute, href, name)
+  a(class=attribute href=href)= name
+mixin header(item)
+  case item
+    when "login"
+      header.header.header_type_login
+        .nav-bar
+          +logo("header","color")
+          ul.nav-bar__line
+            each val in ["О нас", "Услуги", "Вакансии", "Новости", "Соглашения"]
+              if val== "О нас"
+                li.nav-bar__item: +links("nav-link", "#", val)
+              else if val== "Услуги" || val== "Соглашения"
+                li.nav-bar__item: +link-img("nav-link", "#", val, "../../../images/arrow/arrow.svg", "nav-link__image")
+              else
+                li.nav-bar__item: +link("nav-link", "#", val)
+            li.nav-bar__item: button.btn_login= "Войти"
+            li.nav-bar__item: button.btn_singin= "Зарегистрироваться"
+    when "singin"
+      header.header.header_type_singin
+        .nav-bar
+          +logo("header","color")
+          ul.nav-bar__line
+            each val in ["О нас", "Услуги", "Вакансии", "Новости", "Соглашения"]
+              if val== "О нас"
+                li.nav-bar__item: +links("nav-link", "#", val)
+              else if val== "Услуги" || val== "Соглашения"
+                li.nav-bar__item: +link-img("nav-link", "#", val, "../../../images/arrow/arrow.svg", "nav-link__image")
+              else
+                li.nav-bar__item: +link("nav-link", "#", val)
+            li.nav-bar__item.nav-bar__pipe
+            li.nav-bar__item: +link("nav-link", "#", "Юлий Цезарь")

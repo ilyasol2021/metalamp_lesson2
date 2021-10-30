@@ -1,0 +1,23 @@
+mixin logo-color(color)
+  case color 
+    when "wb" 
+      img(src="../../../images/logo/logo-wb.svg" alt="Логотип ТОКСИН").logo-wb
+    when "color" 
+      img(src="../../../images/logo/logo-color.svg" alt="Логотип ТОКСИН").logo-color
+    default
+      - break 
+mixin logo(place,color,i_class)
+  case place 
+    when "main" 
+      .logo.logo_place_main 
+        +logo-color(color).logo.logo_place_main 
+    when "header"
+      .logo.logo_place_header
+        +logo-color(color)
+    when "footer-standart"
+      .logo.logo_place_footer-standart(class= i_class)
+        +logo-color(color)
+    when "footer-mobile"
+      .logo.logo_place_footer-mobile(class= i_class)
+        +logo-color(color)
+        

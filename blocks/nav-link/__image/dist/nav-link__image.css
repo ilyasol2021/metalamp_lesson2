@@ -1,0 +1,16 @@
+.nav-link__image {
+  width: 24px;
+  height: 21px;
+  font-family: "Material Icons", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 20px;
+  object-fit: none;
+  object-position: center;
+}
+.nav-link__image_position_fotter {
+  width: 24px;
+  height: 24px;
+  align-items: center;
+}

@@ -1,0 +1,13 @@
+include ../../blocks/logo/logo
+include ../../blocks/header/header
+include ../../blocks/footer/footer
+doctype html
+html(lang="ru")
+  include ../../blocks/head/head
+  body
+    .main
+      +logo("main","wb")
+      +header("login")
+      +header("singin")
+      +footer("standart")
+      +footer("mobile")

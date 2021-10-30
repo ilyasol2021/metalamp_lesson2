@@ -1,0 +1,9 @@
+.social-link {
+  margin-left: 20px;
+  width: 24px;
+  height: 24px;
+  align-items: center;
+  &:last-of-type {
+    margin: 0;
+  }
+}
