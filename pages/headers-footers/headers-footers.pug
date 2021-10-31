@@ -1,11 +1,12 @@
+include ../../blocks/head/head
 include ../../blocks/logo/logo
 include ../../blocks/header/header
 include ../../blocks/footer/footer
 doctype html
 html(lang="ru")
-  include ../../blocks/head/head
+  +head("headers-footers")
   body
-    .main
+    .main.main_color_grey
       +logo("main","wb")
       +header("login")
       +header("singin")

@@ -1,9 +1,16 @@
 .main {
-  position: absolute;
+  position: relative;
   min-width: 100vw;
   max-width: 1600px;
-  height: 100vh;
   margin: 0;
-  background-color: #F4F4F6;
-  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  &_color_grey {
+    background-color: #F4F4F6;
+    height: 1350px;
+  }
+  &_color_white {
+    height: 900px;
+    background-color: #FFFFFF;
+  }
 }

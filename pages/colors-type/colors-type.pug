@@ -1,0 +1,57 @@
+include ../../blocks/head/head
+include ../../blocks/logo/logo
+doctype html
+html(lang="ru")
+  +head("colors-type")
+  body
+    .main.main_color_white
+      +logo("main","wb")
+      ul.container.container_colors-type
+        ul.container.container__colors-column
+          - var i= 1
+          each val in [{name: "dark-shade-100",h2: "Dark Shade 100%", hex: "#1F2041"}, {name: "dark-shade-75",h2: "Dark Shade 75%", hex: "#1F2041"}, {name: "dark-shade-50",h2: "Dark Shade 50%", hex: "#1F2041"}, {name: "dark-shade-25",h2: "Dark Shade 25%", hex: "#1F2041"}, {name: "dark-shade-5",h2: "Dark Shade 5%", hex: "#1F2041"}, {name: "purple", h2: "Purple", hex: "#BC9CFF"}, {name: "green", h2: "Green", hex: "#6FCF97"}]
+            li.container__colors-items
+              .container__colors-items_box(class="bg-colors_"+ val.name)
+              .container__colors-items_text
+                h2.text.text_h2= val.h2
+                p.text.text_h2.text_hex= val.hex
+        ul.container.container__type-column
+          li.container__type-items_type.colors_dark-shade-100
+            h1.text.text_h1.colors_dark-shade-25.text_align_right H1
+            p.text.text_h1 This one is the sub-section or widget title
+          li.container__type-items
+            h2.text.text_h2.colors_dark-shade-25.text_align_right H2
+            p.text.text_h2 Next one is the item title inside widgets
+          li.container__type-items
+            h3.text.text_h3.colors_dark-shade-25.text_align_right H3
+            p.text.text_h3 This is a label or CTA text
+          li.container__type-items
+            p.text.colors_dark-shade-25.text_align_right Body
+            p.text.colors_dark-shade-75 This is the body text which is used for most of the design, like paragraphs, lists, etc.
+
+        //
+          li.container__type-items_type.colors_dark-shade-100
+            h1.text.text_h1.text_normal.colors_dark-shade-25.text_align_right H1
+            h2.text.text_h2.text_normal.colors_dark-shade-25.text_align_right H2
+            h3.text.text_h3.text_normal.colors_dark-shade-25.text_align_right H3
+            p.text.text_normal.colors_dark-shade-25.text_align_right Body
+          li.container__type-items_text.colors_dark-shade-100
+            p.text.text_h1 This one is the sub-section or widget title
+            p.text.text_h2 Next one is the item title inside widgets
+            p.text.text_h3 This is a label or CTA text
+            p.text.colors_dark-shade-75 This is the body text which is used for most of the design, like paragraphs, lists, etc.
+
+        //
+            h1.text.text_h1.colors_dark-shade-25.text_align_right H1
+            p.text.text_h1 This one is the sub-section or widget title
+          li.container__type-items
+            h2.text.text_h2.colors_dark-shade-25.text_align_right H2
+            p.text.text_h2 Next one is the item title inside widgets
+          li.container__type-items
+            h3.text.text_h3.colors_dark-shade-25.text_align_right H3
+            p.text.text_h3 This is a label or CTA text
+          li.container__type-items
+            p.text.colors_dark-shade-25.text_align_right Body
+            p.text.colors_dark-shade-75 This is the body text which is used for most of the design, like paragraphs, lists, etc.
+
+

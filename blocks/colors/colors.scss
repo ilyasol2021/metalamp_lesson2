@@ -1,0 +1,18 @@
+$colors: #1F2041 rgba(31, 32, 65, 0.75) rgba(31, 32, 65, 0.5) rgba(31, 32, 65, 0.25) rgba(31, 32, 65, 0.05) #BC9CFF #6FCF97;
+$colors_name: dark-shade-100 dark-shade-75 dark-shade-50 dark-shade-25 dark-shade-5 purple green;
+$color_type_text: color;
+$color_type_bg: background-color;
+
+@mixin m_colors($type) {
+  @for $i from 1 to 8 {
+    &_#{nth($colors-name, $i)} {
+      #{$type}: nth($colors, $i);
+    }
+  }
+}
+.colors {
+  @include m_colors($color_type_text);
+}
+.bg-colors {
+  @include m_colors($color_type_bg);
+}
